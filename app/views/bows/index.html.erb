@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Serial number</th>
+      <th>Description</th>
+      <th>Bow type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bows.each do |bow| %>
+      <tr>
+        <td><%= bow.make %></td>
+        <td><%= bow.model %></td>
+        <td><%= bow.serial_number %></td>
+        <td><%= bow.description %></td>
+        <td><%= bow.bow_type %></td>
+        <td><%= link_to 'Show', bow %></td>
+        <td><%= link_to 'Edit', edit_bow_path(bow) %></td>
+        <td><%= link_to 'Destroy', bow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bow', new_bow_path %>

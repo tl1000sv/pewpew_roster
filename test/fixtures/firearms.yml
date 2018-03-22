@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  cartridge: 1
+  classification: 1
+  action: 1
+  serial_number: MyString
+
+two:
+  make: MyString
+  model: MyString
+  cartridge: 1
+  classification: 1
+  action: 1
+  serial_number: MyString

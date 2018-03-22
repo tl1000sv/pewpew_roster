@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @firearm.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @firearm.model %>
+</p>
+
+<p>
+  <strong>Cartridge:</strong>
+  <%= @firearm.cartridge %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @firearm.classification %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @firearm.action %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @firearm.serial_number %>
+</p>
+
+<%= link_to 'Edit', edit_firearm_path(@firearm) %> |
+<%= link_to 'Back', firearms_path %>

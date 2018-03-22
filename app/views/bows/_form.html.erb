@@ -1,0 +1,42 @@
+<%= form_with(model: bow, local: true) do |form| %>
+  <% if bow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bow.errors.count, "error") %> prohibited this bow from being saved:</h2>
+
+      <ul>
+      <% bow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make, id: :bow_make %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :bow_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial_number %>
+    <%= form.text_field :serial_number, id: :bow_serial_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :bow_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bow_type %>
+    <%= form.number_field :bow_type, id: :bow_bow_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

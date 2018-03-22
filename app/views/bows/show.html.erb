@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @bow.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @bow.model %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @bow.serial_number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bow.description %>
+</p>
+
+<p>
+  <strong>Bow type:</strong>
+  <%= @bow.bow_type %>
+</p>
+
+<%= link_to 'Edit', edit_bow_path(@bow) %> |
+<%= link_to 'Back', bows_path %>
