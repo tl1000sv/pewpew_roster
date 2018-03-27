@@ -29,6 +29,7 @@
   <div class="field">
     <%= form.label :classification %>
     <%= form.number_field :classification, id: :firearm_classification %>
+    <%= form.collection_select :firearm_classification, Firearm::classification, :to_s, :to_s %>
   </div>
 
   <div class="field">

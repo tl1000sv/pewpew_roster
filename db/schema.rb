@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317143656) do
+ActiveRecord::Schema.define(version: 20180324194447) do
 
   create_table "bows", force: :cascade do |t|
     t.string "make"
@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(version: 20180317143656) do
     t.string "serial_number"
     t.string "description"
     t.integer "bow_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cartridges", force: :cascade do |t|
+    t.string "caliber"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classifications", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
